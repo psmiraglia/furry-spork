@@ -4,7 +4,8 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "test": "node ./node_modules/jest/bin/jest.js"
+    "test": "node ./node_modules/jest/bin/jest.js",
+    "lint": "node ./node_modules/eslint/bin/eslint.js ."
   },
   "repository": {
     "type": "git",

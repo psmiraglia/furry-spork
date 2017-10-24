@@ -1,20 +1,23 @@
 version: 2
 jobs:
-    build:
-        docker:
-            - image: circleci/node:latest
-        steps:
-            - checkout
-            - restore_cache:
-                keys:
-                    - dependencies-{{ checksum "package.json" }}
-            - run:
-                name: Install dependencies
-                command: npm install
-            - save_cache:
-                paths:
-                    - node_modules
-                key: dependencies-{{ checksum "package.json" }}
-            - run:
-                name: Test it!
-                command: npm test
+  build:
+    docker:
+      - image: circleci/node:latest
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - dependencies-{{ checksum "package.json" }}
+      - run:
+          name: Install dependencies
+          command: npm install
+      - save_cache:
+          paths:
+            - node_modules
+          key: dependencies-{{ checksum "package.json" }}
+      - run:
+          name: Check lint
+          command: npm run lint
+      - run:
+          name: Test it
+          command: npm test
