@@ -1,0 +1,22 @@
+{
+  "name": "furry-spork",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node ./node_modules/jest/bin/jest.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/psmiraglia/furry-spork.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/psmiraglia/furry-spork/issues"
+  },
+  "homepage": "https://github.com/psmiraglia/furry-spork#readme",
+  "devDependencies": {
+    "jest": "^21.2.1"
+  }
+}
